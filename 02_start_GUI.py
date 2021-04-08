@@ -10,6 +10,10 @@ class Start:
         self.start_frame = Frame(padx=10, pady=10)
         self.start_frame.grid()
 
+        # Set Initial balance to zero
+        self.starting_funds = IntVar()
+        self.starting_funds.set(0)
+
         # Mystery Heading (row 0)
         self.mystery_box_label = Label(self.start_frame, text="Mystery Box Game",
                                        font="Arial 19 bold")
@@ -187,6 +191,6 @@ class Game:
 # main routine
 if __name__ == "__main__":
     root = Tk()
-    root.title("title goes here")
+    root.title("Mystery Box Game")
     something = Start(root)
     root.mainloop()
